@@ -2,13 +2,15 @@ body, html {
     margin: 0;
     padding: 0;
 }
-h2 {
+h1{
     color: #ffffff;
-
 }
 header {
     width: 100%;
     height: 100px;
     text-align: center;
     background-color: #212121;
+}
+h4 {
+    color: lightgreen;
 }
