@@ -68,5 +68,20 @@
     "productPhoto": "https://assets.epicurious.com/photos/5c7848cb0bf9d330b3b8d6ae/16:9/w_2560%2Cc_limit/Best-Espresso-Machines-28022019.jpg",
     "productName": "Coffee machine",
     "productPrice": "609$"
+  },
+  {
+    "productPhoto": "https://thumbs.worthpoint.com/zoom/images1/360/0214/19/oversize-sba-huge-mens-fashion-little_360_39522a94667cda152b0f4b23f20a26b7.jpg",
+    "productName": "SBA",
+    "productPrice": "139.99$"
+  },
+  {
+    "productPhoto": "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "productName": "Coffee Shop",
+    "productPrice": "1$"
+  },
+  {
+    "productPhoto": "https://www.itl.cat/pngfile/big/36-365999_coffee-beans-grinder-wallpaper-coffee-shop.jpg",
+    "productName": "Coffee Sets",
+    "productPrice": "44.99$"
   }
-  ]
+ ]
