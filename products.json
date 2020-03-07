@@ -22,6 +22,51 @@
   {
     "productPhoto": "https://danielgalyean.com/wp-content/uploads/2017/12/modern-living-room-wallpaper-ideas-desktop-design-interior-wallpapers-for-home-fashion-styles-bedroom-walls-how-to-choose-house-pictures-hd-rocks-1080x675.jpg",
     "productName": "Modern",
-    "Price": "1999$"
-  }
+    "ProductPrice": "1999$"
+  },
+  {
+    "productPhoto": "https://ae01.alicdn.com/kf/HTB1urMbX6vuK1Rjy0Faq6x2aVXaV/beibehang-Custom-fashion-silky-3d-wallpaper-HD-modern-fashion-hand-painted-beauty-barber-shop-tooling-papel.jpg",
+    "productName": "BarBer",
+    "productPrice": "50$"
+  },
+  {
+    "productPhoto": "https://freedesignfile.com/upload/2017/06/Fashion-summer-women-and-cosmetics-and-accessories-HD-picture-12.jpg",
+    "productName": "Collection",
+    "productPrice": "199$"
+  },
+  {
+    "productPhoto": "https://freedesignfile.com/upload/2017/06/Fashion-summer-women-and-cosmetics-and-accessories-HD-picture-02.jpg",
+    "productName": "Collection 2",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://ak6.picdn.net/shutterstock/videos/16989676/thumb/8.jpg",
+    "productName": "Jewelery",
+    "productPrice": "399.99"
+  },
+  {
+    "productPhoto": "https://c0.wallpaperflare.com/preview/36/384/1023/bag-handbag-accessories-accessory.jpg",
+    "productName": "kit",
+    "productPrice": "44.99$"
+  },
+  {
+    "productPhoto": "https://s1.1zoom.me/big0/78/433276-Kycb.jpg",
+    "productName": "Antiques",
+    "productPrice": "599$"
+  },
+  {
+    "productPhoto": "https://www.vedtextilesandapparels.com/wp-content/uploads/2019/03/1-10.jpg",
+    "productName": "Gentle",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://c0.wallpaperflare.com/preview/98/418/408/flatlay-makeup-accessories-beauty.jpg",
+    "productName": "Makeup",
+    "productPrice": "239$"
+  },
+  {
+    "productPhoto": "https://assets.epicurious.com/photos/5c7848cb0bf9d330b3b8d6ae/16:9/w_2560%2Cc_limit/Best-Espresso-Machines-28022019.jpg",
+    "productName": "Coffee machine",
+    "productPrice": "609$"
+  },
   ]
