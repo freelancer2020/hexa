@@ -1,3 +1,4 @@
-name, age, title
-mostafa,35, JavaScript Developer
-Mohamed, 25, Marketing
+Skills, Path, Stars, Projects, Importance
+JavaScript, Learning, 5, Available, True
+React.Js, Learning, 5, Available, Ture
+Node.Js, Learning, 5, Available, Ture
