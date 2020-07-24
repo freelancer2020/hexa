@@ -1,4 +1,5 @@
 <template id = 'feedback-template'>
+  
   <div id = 'feedback-container'>
   <div id = 'intro'>
     <p>
@@ -177,4 +178,62 @@
   cursor: pointer;
 }
   </style>
+  
+  <script>
+    const radioUI = document.getElementsByClassName('radio-feed-ui');
+const radioUX = document.getElementsByClassName('radio-feed-ux');
+const radioFN = document.getElementsByClassName('radio-feed-fn');
+const radioBR = document.getElementsByClassName('radio-feed-br');
+
+const radioArrays = [radioUI, radioUX, radioFN, radioBR];
+
+
+function unique() {
+  for (let i of radioUI) {
+    i.checked = false;
+  }
+  this.checked = true;
+}
+
+for (let i = 0; i < radioUI.length; i++) {
+  radioUI[i].addEventListener('click', unique, false);
+}
+
+
+function uniquex() {
+  for (let i of radioUX) {
+    i.checked = false;
+  }
+  this.checked = true;
+}
+
+for (let x = 0; x < radioUX.length; x++) {
+  radioUX[x].addEventListener('click', uniquex, false);
+}
+
+
+function uniquefn() {
+  for (let i of radioFN) {
+    i.checked = false;
+  }
+  this.checked = true;
+}
+
+for (let y = 0; y < radioFN.length; y++) {
+  radioFN[y].addEventListener('click', uniquefn, false);
+}
+
+function uniquebr() {
+  for (let i of radioBR) {
+    i.checked = false;
+  }
+  this.checked = true;
+}
+
+for (let y = 0; y < radioBR.length; y++) {
+  radioBR[y].addEventListener('click', uniquebr, false);
+}
+
+  </script>
+  
 </template>
