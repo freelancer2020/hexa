@@ -1,7 +1,7 @@
 <template id = 'graphs'>
   <div id = 'feedback-graph-container'>
   <div id = 'feedback-header-container'>
-    <p> Your feedback has been sent!</p>
+    <p id = 'feder'> Your feedback has been sent!</p>
     <p>
       Thank you for taking the time to evaluate my work, below the graph showing  your feedback 
       later will be merged with the other's feedback and absolutely will affect the result of the main graph, so easily I will be improving accordingly.
@@ -44,10 +44,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;  
+    font-family: 'Alatsi';
+    color: #2b2b2b;
   }
 
   #graph-body {
-    width: flex;
+    display: flex;
     justify-content: space-around;   
   }
 
@@ -63,5 +65,7 @@
     display: flex;
     flex-direction: column;  
   }
+  #feder {
+    font-size: 20px;
 </style>
 </template>
