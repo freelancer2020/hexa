@@ -1,0 +1,67 @@
+<template id = 'graphs'>
+  <div id = 'feedback-graph-container'>
+  <div id = 'feedback-header-container'>
+    <p> Your feedback has been sent!</p>
+    <p>
+      Thank you for taking the time to evaluate my work, below the graph showing  your feedback 
+      later will be merged with the other's feedback and absolutely will affect the result of the main graph, so easily I will be improving accordingly.
+      Thank you again it wasn't just feedback but effective pushing.
+    </p>
+  </div>
+  <div id = 'graph-body'>
+    <div id = 'svg-container'>
+      <svg style = 'width: 400; height: 350;'>
+        
+        <path d = 'M 100 10 100 300 390 300' stroke = 'royalblue' fill = 'transparent' stroke-width ='2' />
+        <text x = '10' y = '40'>Very good </text>
+        <text x = '10' y = '120'>good</text>
+        <text x = '10' y = '200'>normal</text>
+        <text x = '10' y = '280'>Bad</text>
+
+        <text x = '120' y = '320'>UI</text>
+        <text x = '200' y = '320'>UX</text>
+        <text x = '280' y = '320'>FN</text>
+        <text x = '340' y = '320'>Browser</text>
+
+        <line x1 = '90' y1 = '40' x2 = '100' y2 = '40' stroke = 'royalblue'  stroke-width = '2'/>
+        <line x1 = '90' y1 = '120' x2 = '100' y2 = '120' stroke = 'royalblue'  stroke-width = '2'/>
+        <line x1 = '90' y1 = '200' x2 = '100' y2 = '200' stroke = 'royalblue'  stroke-width = '2'/>
+        <line x1 = '90' y1 = '280' x2 = '100' y2 = '280' stroke = 'royalblue'  stroke-width = '2'/>
+
+      </svg>
+    </div>
+    <div id = 'result-container'>
+      <p>UI: <span id = 'ui'></span></p>
+      <p>UX: <span id = 'ui'></span></p>
+      <p>Functionality: <span id = 'ui'></span></p>
+      <p>Browsers CMP: <span id = 'ui'></span></p>
+    </div>
+  </div>
+</div>
+<style>
+#feedback-graph-container {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }
+
+  #graph-body {
+    width: flex;
+    justify-content: space-around;   
+  }
+
+  #svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 400px;
+  }
+
+  #result-container {
+    display: flex;
+    flex-direction: column;  
+  }
+</style>
+</template>
