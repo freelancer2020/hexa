@@ -968,6 +968,7 @@ homeWall.onscroll = function() {
  }
 };
 
+// Query Box Component ................................................
 class QueryBox extends HTMLElement {
   constructor() {
     super();
@@ -1012,6 +1013,7 @@ class QueryBox extends HTMLElement {
     box-shadow: 0px 0px 3px 3px #E5E4E2;
     border-radius: 10px;
     cursor: pointer;
+    color: #2b2b2b;
   }
   #feedback-box {
     width: 90%;
@@ -1038,7 +1040,6 @@ class QueryBox extends HTMLElement {
     align-items: center;
     font-family: 'Alatsi';
     font-size: 16px;
-    color: #2b2b2b;
   }
 </style>
     `;
@@ -1082,6 +1083,7 @@ class QueryBox extends HTMLElement {
 
 window.customElements.define('mail-survey', QueryBox);
 
+// Feedback component ...........................................................
 class FeedBack extends HTMLElement {
   constructor() {
     super();
@@ -1725,32 +1727,6 @@ class AppSettings extends HTMLElement {
     const btn = this.shadowRoot.getElementById('toggle-container');
     const ball = this.shadowRoot.getElementById('ball');
 
-    btn.onclick = function() {
-      this.classList.toggle('cool');
-    }
-  }
-}
-
-window.customElements.define('app-settings', AppSettings);
-
-
-// App settings....
-const appSettingsBtn = document.getElementsByClassName('fa-cogs')[0];
-const closeAppSettings = document.getElementById('close-app-settings');
-const app = document.getElementById('app-settings');
-
-function openAppSettings() {
-  app.style.display = 'flex';
-}
-
-appSettingsBtn.addEventListener('click', openAppSettings, false);
-
-closeAppSettings.onclick = function() {
-  app.style.display = 'none';
-}
-
-
-// operations test dark mode
 const loka = rockFrame[0].shadowRoot.getElementById('frame');
 const cards = document.getElementsByTagName('skill-card');
 const profileCard =document.getElementsByTagName('profile-card')[0];
@@ -1767,12 +1743,24 @@ const homeWalls = document.getElementsByClassName('home-wall')[0];
 const theEnd = document.getElementById('the-end');
 const dropo = document.getElementsByClassName('drop-mail-container')[0];
 const dropBody = document.getElementById('drop-body');
+const appSetingo = document.getElementById('app-settings');
+const settingCompoent = document.getElementsByTagName('app-settings')[0];
+//const sur = document.getElementsByTagName('feedback-survey');
+const queryBox = document.getElementsByTagName('mail-survey')[0];
 
-
-
+    btn.onclick = function() {
+      this.classList.toggle('cool');
+      if (this.classList.contains('cool')) { //start war
+        // operations test dark mode
+        
 document.documentElement.style.backgroundColor = '#212121';
-dropBody.style.cssText= 'background-color: #212121; color: #E5E4E2;';
-dropo.style.cssText = 'background-color: #212121; color: #E5E4E2;';
+queryBox.shadowRoot.getElementById('query-box').style.backgroundColor = '#212121';
+queryBox.shadowRoot.getElementById('mail-box').style.cssText = 'background-color: #212121; color: #E5E4E2;';
+queryBox.shadowRoot.getElementById('feedback-box').style.cssText = 'background-color: #212121; color: #E5E4E2;';
+settingCompoent.shadowRoot.getElementById('app-container').style.cssText = 'background-color: #212121; color: #E5E4E2;';
+appSetingo.style.cssText = 'background-color: #212121; color: #E5E4E2;';
+//dropBody.style.cssText= 'background-color: #212121; color: #E5E4E2;';
+//dropo.style.cssText = 'background-color: #212121; color: red;';
 homeWalls.style.backgroundColor = '#212121';
 leftWall.style.backgroundColor = '#212121';
 rightWall.style.backgroundColor = '#212121';
@@ -1811,6 +1799,91 @@ for (let i = 0; i < intersto.length; i++) {
 }
 
 const grapho = d3.select('#savago');
-grapho.selectAll('text').style('fill', '#E5E4E2')
+grapho.selectAll('text').style('fill', '#E5E4E2');
+
+
+//prefix..[]
+const app = document.getElementById('app-settings');
+app.style.display = 'flex';
+
+        
+      } else {
+document.documentElement.style.backgroundColor = '';
+queryBox.shadowRoot.getElementById('query-box').style.backgroundColor = '';
+queryBox.shadowRoot.getElementById('mail-box').style.cssText = 'background-color: ; color: ;';
+queryBox.shadowRoot.getElementById('feedback-box').style.cssText = 'background-color: #; color: ;';
+settingCompoent.shadowRoot.getElementById('app-container').style.cssText = 'background-color: ; color: ;';
+appSetingo.style.cssText = 'background-color: ; color: ;';
+//dropBody.style.cssText= 'background-color: #212121; color: #E5E4E2;';
+//dropo.style.cssText = 'background-color: #212121; color: red;';
+homeWalls.style.backgroundColor ='';
+leftWall.style.backgroundColor = '';
+rightWall.style.backgroundColor = '';
+exipo.style.color = '';
+theEnd.style.cssText = 'background-color: ; color: ; ';
+navigato.shadowRoot.getElementById('navigation-container').style.backgroundColor = '';
+for (let i = 0; i < cards.length; i++) {
+  cards[i].shadowRoot.getElementById('card').style.cssText = `background-color: ; color: ;`;
+}
+
+profileCard.shadowRoot.getElementById('profile-frame').style.cssText = `background-color: ; color: `;
+
+for (let i = 0; i < rockFrame.length; i++) {
+  rockFrame[i].shadowRoot.getElementById('frame').style.cssText = `background-color: ; color: `;
+}
+
+for (let i = 0; i < edu.length; i++) {
+  edu[i].style.cssText  = `color:  `;
+}
+
+for (let i = 0; i < aro.length; i++) {
+  aro[i].style.color = '';
+
+}
+
+for (let i = 0; i < lango.length; i++) {
+  lango[i].shadowRoot.getElementById('lang-row-header').style.cssText = `background-color: ; border: ;`;
+}
+
+for (let i = 0; i < awardo.length; i++) {
+  awardo[i].style.cssText = `background-color:  ; border: ;`;
+}
+
+for (let i = 0; i < intersto.length; i++) {
+  intersto[i].shadowRoot.getElementById('container-interest').style.cssText = `background-color: ; color: ;`;
+}
+
+const grapho = d3.select('#savago');
+grapho.selectAll('text').style('fill', '#');
+
+
+//prefix..[]
+const app = document.getElementById('app-settings');
+app.style.display = 'flex';
+
+      }
+    }
+  }
+}
+
+window.customElements.define('app-settings', AppSettings);
+
+
+// App settings....
+const appSettingsBtn = document.getElementsByClassName('fa-cogs')[0];
+const closeAppSettings = document.getElementById('close-app-settings');
+const app = document.getElementById('app-settings');
+
+function openAppSettings() {
+  app.style.display = 'flex';
+}
+
+appSettingsBtn.addEventListener('click', openAppSettings, false);
+
+closeAppSettings.onclick = function() {
+  app.style.display = 'none';
+}
+
+
 
 
