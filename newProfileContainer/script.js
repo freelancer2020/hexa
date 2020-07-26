@@ -1204,6 +1204,7 @@ class FeedBack extends HTMLElement {
   flex-direction: column;
   width: 100%;
   margin-top: 10px;
+  
 }
 .feedback-item {
   width: 100%;
@@ -1273,6 +1274,7 @@ class FeedBack extends HTMLElement {
     const radioUX = this.shadowRoot.querySelectorAll('.radio-feed-ux');
     const radioFN = this.shadowRoot.querySelectorAll('.radio-feed-fn');
     const radioBR = this.shadowRoot.querySelectorAll('.radio-feed-br');
+    const btn = this.shadowRoot.getElementById('feedback-btn');
     
     const radioArrays = [radioUI, radioUX, radioFN, radioBR];
     
@@ -1322,7 +1324,249 @@ class FeedBack extends HTMLElement {
     for (let y = 0; y < radioBR.length; y++) {
       radioBR[y].addEventListener('click', uniquebr, false);
     }
+
+    btn.onclick = function() {
+     
+      new Promise((resolve, reject) => {
+        const analytics = {
+          data: [
+            {header: undefined, value: undefined},
+            {header: undefined, value: undefined},
+            {header: undefined, value: undefined},
+            {header: undefined, value: undefined}
+          ]
+        };
+  
+        for (let i = 0; i < radioArrays.length; i++) {
+          for (let j = 0; j < radioArrays[i].length; j++) {
+            if (radioArrays[i][j].checked == true) {
+              analytics.data[i].header = radioArrays[i][j].parentNode.parentNode.previousElementSibling.innerText;
+              analytics.data[i].value = radioArrays[i][j].value;
+            }
+          }
+        }
+        resolve(analytics);
+        reject(new Error('Something went wrong'));
+
+      })
+      .then(data => {
+        const mailBody = document.getElementById('drop-body');
+        const graphFrame = document.createElement('div');
+        const url = 'https://raw.githubusercontent.com/freelancer2020/hexa/master/graph.html';
+        graphFrame.classList.add('finally');
+        mailBody.children[0].remove();
+        mailBody.append(graphFrame);
+
+        fetch(url)
+        .then(response => response.text())
+        .then(file => {
+          const parser = new DOMParser();
+          const page = parser.parseFromString(file, 'text/html');
+          const pageLayout = page.getElementById('graphs');
+          const contentPage = pageLayout.content.cloneNode(true);
+          graphFrame.append(contentPage);
+        })
+        .then( () => {
+          
+          const svgGraph = d3.select('#feed-graph');
+          for(let i = 0; i < data.data.length; i++) {
+            if (data.data[i].header == 'UI' && data.data[i].value == 'very good') {
+              /*
+              svgGraph.append('circle')
+              .attr('cx', '120')
+              .attr('cy', '40')
+              .attr('r', '7')
+              .attr('class', 'cic')
+              .attr('fill', '#54C571');
+              d3.select('#ui').text('Very good');
+              d3.select('#ui').style('color', '#54C571');
+              */
+             let g = svgGraph.append('g')
+             g.attr('class', 'testo')
+             g.append('text').text('zoob')
+             g.append('circle')
+             .attr('cx', '120')
+              .attr('cy', '40')
+              .attr('r', '7')
+              .attr('class', 'cic')
+              .attr('fill', '#54C571')
+
+              d3.select('#ui').text('Very good');
+              d3.select('#ui').style('color', '#54C571');
+
+              
+            }
+            if (data.data[i].header == 'UI' && data.data[i].value == 'good') {
+              svgGraph.append('circle')
+              .attr('cx', '120')
+              .attr('cy', '120')
+              .attr('r', '7')
+              .attr('class', 'cic')
+              .attr('fill', '#99C68E');
+              d3.select('#ui').text('Good');
+              d3.select('#ui').style('color', '#99C68E');
+            }
+            if (data.data[i].header == 'UI' && data.data[i].value == 'normal') {
+              svgGraph.append('circle')
+              .attr('cx', '120')
+              .attr('cy', '200')
+              .attr('r', '7')
+              .attr('class', 'cic')
+              .attr('fill', '#F3E5AB');
+              d3.select('#ui').text('Normal');
+              d3.select('#ui').style('color', '#F3E5AB');
+            
+            }
+            if (data.data[i].header == 'UI' && data.data[i].value == 'bad') {
+              svgGraph.append('circle')
+              .attr('cx', '120')
+              .attr('cy', '280')
+              .attr('r', '7')
+              .attr('class', 'cic')
+              .attr('fill', '#C24641');
+              d3.select('#ui').text('Bad');
+              d3.select('#ui').style('color', '#C24641');
+            }
+  
+            if (data.data[i].header == 'UX' && data.data[i].value == 'very good') {
+              svgGraph.append('circle')
+              .attr('cx', '200')
+              .attr('cy', '40')
+              .attr('r', '7')
+              .attr('fill', '#54C571');
+              d3.select('#ux').text('Very good');
+              d3.select('#ux').style('color', '#54C571');
+            }
+            if (data.data[i].header == 'UX' && data.data[i].value == 'good') {
+              svgGraph.append('circle')
+              .attr('cx', '200')
+              .attr('cy', '120')
+              .attr('r', '7')
+              .attr('fill', '#99C68E');
+              d3.select('#ux').text('Good');
+              d3.select('#ux').style('color', '#99C68E');
+            }
+            if (data.data[i].header == 'UX' && data.data[i].value == 'normal') {
+              svgGraph.append('circle')
+              .attr('cx', '200')
+              .attr('cy', '200')
+              .attr('r', '7')
+              .attr('fill', '#F3E5AB');
+              d3.select('#ux').text('Normal');
+              d3.select('#ux').style('color', '#F3E5AB');
+            }
+            if (data.data[i].header == 'UX' && data.data[i].value == 'bad') {
+              svgGraph.append('circle')
+              .attr('cx', '200')
+              .attr('cy', '280')
+              .attr('r', '7')
+              .attr('fill', '#C24641');
+              d3.select('#ux').text('Bad');
+              d3.select('#ux').style('color', '#C24641');
+            }
+  
+            if (data.data[i].header == 'Functionality' && data.data[i].value == 'very good') {
+              svgGraph.append('circle')
+              .attr('cx', '280')
+              .attr('cy', '40')
+              .attr('r', '7')
+              .attr('fill', '#54C571');
+              d3.select('#fn').text('Very good');
+              d3.select('#fn').style('color', '#54C571');
+            }
+            if (data.data[i].header == 'Functionality' && data.data[i].value == 'good') {
+              svgGraph.append('circle')
+              .attr('cx', '280')
+              .attr('cy', '120')
+              .attr('r', '7')
+              .attr('fill', '#99C68E');
+              d3.select('#fn').text('Good');
+              d3.select('#fn').style('color', '#99C68E');
+            }
+            if (data.data[i].header == 'Functionality' && data.data[i].value == 'normal') {
+              svgGraph.append('circle')
+              .attr('cx', '280')
+              .attr('cy', '200')
+              .attr('r', '7')
+              .attr('fill', '#F3E5AB');
+              d3.select('#fn').text('Normal');
+              d3.select('#fn').style('color', '#F3E5AB');
+            }
+            if (data.data[i].header == 'Functionality' && data.data[i].value == 'bad') {
+              svgGraph.append('circle')
+              .attr('cx', '280')
+              .attr('cy', '280')
+              .attr('r', '7')
+              .attr('fill', '#C24641');
+              d3.select('#fn').text('Bad');
+              d3.select('#fn').style('color', '#C24641');
+            }
+  
+            if (data.data[i].header == 'Browsers CMP' && data.data[i].value == 'very good') {
+              svgGraph.append('circle')
+              .attr('cx', '340')
+              .attr('cy', '40')
+              .attr('r', '7')
+              .attr('fill', '#54C571');
+              d3.select('#br').text('Very good');
+              d3.select('#br').style('color', '#54C571');
+            }
+            if (data.data[i].header == 'Browsers CMP' && data.data[i].value == 'good') {
+              svgGraph.append('circle')
+              .attr('cx', '340')
+              .attr('cy', '120')
+              .attr('r', '7')
+              .attr('fill', '#99C68E');
+              d3.select('#br').text('Good');
+              d3.select('#br').style('color', '#99C68E');
+            }
+            if (data.data[i].header == 'Browsers CMP' && data.data[i].value == 'normal') {
+              svgGraph.append('circle')
+              .attr('cx', '340')
+              .attr('cy', '200')
+              .attr('r', '7')
+              .attr('fill', '#F3E5AB');
+              d3.select('#br').text('Normal');
+              d3.select('#br').style('color', '#F3E5AB');
+            }
+            if (data.data[i].header == 'Browsers CMP' && data.data[i].value == 'bad') {
+              svgGraph.append('circle')
+              .attr('cx', '340')
+              .attr('cy', '280')
+              .attr('r', '7')
+              .attr('fill', '#C24641');
+              d3.select('#br').text('Bad');
+              d3.select('#br').style('color', '#C24641');
+            }
+           
+          }
+        })
+        .then(() => {
+          let [x, y] = [[], []];
+          let lop = ['Q'];
+          const tags = document.getElementsByTagName('circle');
+          for (let i = 0; i < tags.length; i++) {
+            x.push(tags[i].getAttribute('cx'));
+            y.push(tags[i].getAttribute('cy'));
+          }
+          const svg = d3.select('#feed-graph');
+          let d = 'M';
+          for (let i = 0; i < x.length; i++) {
+            d += `${x[i]} ${y[i]} `;
+          }
+    
+          svg.append('path')
+          .attr('d', d)
+          .attr('stroke', '#E5E4E2')
+          .attr('stroke-width', '2')
+          .attr('fill', 'transparent')
+      });
+      
+    })
+      
+    }
   }
+
 }
 
 window.customElements.define('feedback-survey', FeedBack);
@@ -1343,3 +1587,39 @@ function closeMailMessage() {
 }
 
 closeBtn.addEventListener('click', closeMailMessage, false);
+
+
+
+const bodyRview = document.getElementById('review-body');
+// global Components
+const rockFrame = document.getElementsByTagName('rock-frame');
+
+const nav = document.getElementsByTagName('navigation-bar')[0];
+nav.onclick = function(e) {
+
+  switch(e.target.className) {
+    case 'fas fa-address-card':
+      rockFrame[0].scrollIntoView(true);
+      break;
+    case 'fas fa-user-graduate':
+      rockFrame[1].scrollIntoView(true);
+      break;
+    case 'fas fa-briefcase':
+      rockFrame[2].scrollIntoView(true);
+      break;
+    case 'fas fa-laptop-code':
+      rockFrame[3].scrollIntoView(true);
+      break;
+    case 'fas fa-language':
+      rockFrame[4].scrollIntoView(true);
+      break;
+    case 'fas fa-award':
+      rockFrame[5].scrollIntoView(true);
+      break;
+    case 'fas fa-swimmer':
+      rockFrame[6].scrollIntoView(true);
+      break;
+    default: return;
+  }
+
+}
