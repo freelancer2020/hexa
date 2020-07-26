@@ -371,7 +371,7 @@
                             
                             <div id = 'graph-container'>
                                 <div id = 'svg-container'>
-                                  <svg>
+                                  <svg id = 'savago'>
                                    <path d = 'M 10 10 10 190 290 190' fill = 'transparent' stroke = '#E5E4E2' stroke-width = 5 />
                                    <path id = 'loop' d = 'M 0 20 Q 300 0 20 200' fill = 'transparent' stroke = '#E5E4E2' stroke-width = 5 />
                                    <text x = '40' y = '100' id = 'lang-graph'>Polish</text>
@@ -498,7 +498,7 @@
             </rock-frame>
 
             <div id = 'the-end'>
-                <p id  = 'end-txt'>Thank you for taking time to review my application.</p>
+                <p id  = 'end-txt'>Thank you for taking the time to review my application.</p>
                 <div id = 'reload'>
                     <i class="fas fa-redo"></i>
                 </div>
@@ -512,18 +512,26 @@
                 <i class="fas fa-window-close"></i>
             </div>
             <div id = 'drop-body'>
-                <!--<message-form></message-form>-->
+                
             </div>
         </div>
 
-        <!--Static preview navigation-->
-        <!--
-        <div id = 'preview-navigation'>
-            <div id = 'top-bar'>
-                <i class="fas fa-window-close"></i>
+
+        <!--App settings-->
+        <div id = 'app-settings'>
+            <div id = 'app-settings-bar'>
+                <i class="fas fa-window-close" id = 'close-app-settings'></i>
             </div>
-            <div id = 'review-body'></div>
-        </div>-->
+            <div id = 'app-settings-body'>
+                <app-settings>
+                    <div slot = 'dark-mode'>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </app-settings>
+            </div>
+        </div>
+
+        
 
         
 

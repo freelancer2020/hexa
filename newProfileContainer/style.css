@@ -5,6 +5,7 @@ body, html {
     scroll-behavior: smooth;
     background-color: #F2F5F5;
 }
+
 /*Header section... */
 
 header {
@@ -315,6 +316,7 @@ header {
     box-shadow: 0px 0px 10px 5px lightgray;
 }
 
+/* Right static wall */
 .right-static-wall {
     height: 90vh;
     width: 19vw;
@@ -663,12 +665,13 @@ header {
       font-family: 'Alatsi';
       font-size: 14px;
       position: relative;
+      color: #2b2b2b;
   }
   #end-txt {
       width: 100%;
       display: flex;
       justify-content: center;
-      color: #2b2b2b;
+      
   }
   .fa-redo {
       font-size: 1.5vw;
@@ -714,7 +717,6 @@ header {
       z-index: 20;
       border-radius: 10px;
       transition: 0.5s ease-out;
-      
   }
   #drop-header {
       width: 50vw;
@@ -755,7 +757,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 
@@ -774,7 +775,6 @@ header {
     bottom: 0;
     right: 0;
     position: absolute;
-    
 }
 
 /* preview navigation */
@@ -797,13 +797,51 @@ header {
     box-shadow: 0px 0px 5px 5px #E5E4E2;
     z-index: 20;
 }
+
 #top-bar {
     width: 100%;
     height: auto;
     display: flex;
-    flex-flow: row-reverse;
-    
+    flex-flow: row-reverse; 
 }
+
 .testo {
     z-index: 10;
 }
+
+/* app settings control */
+.fa-moon {
+    font-size: 1.5vw;
+}
+#app-settings {
+    width: 18vw;
+    height: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-top: 11vh;
+    margin-right: 0.5vw;
+    background-color: #ffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #E5E4E2;
+    transition: all 0.5s ease-out;
+}
+
+#app-settings-bar {
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse;
+    -ms-flex-flow: column-reverse; 
+}
+
+#app-settings-body {
+    width: 17vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-out;
+}
+

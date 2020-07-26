@@ -103,6 +103,7 @@ class ProfileCard extends HTMLElement {
             background-color: #ffff;
             border-radius: 20px;
             box-shadow: 0px 0px 5px 5px #E5E4E2;
+            color: #8B8A88;
         }
         #profile-photo {
             width: 100%;
@@ -146,7 +147,7 @@ class ProfileCard extends HTMLElement {
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #8B8A88;
+            
         }
         .arman {
             font-family: 'Amaranth';
@@ -213,6 +214,7 @@ function openMediaLink(e) {
 
 media.addEventListener('click', openMediaLink, false);
 
+// Navigation Component .........................................................................
 class Navigation extends HTMLElement {
     constructor() {
         super();
@@ -252,6 +254,7 @@ class Navigation extends HTMLElement {
 
 window.customElements.define('navigation-bar', Navigation);
 
+// Frames Component...................................................................
 class Frames extends HTMLElement {
     constructor() {
         super();
@@ -287,6 +290,7 @@ class Frames extends HTMLElement {
             background-color: #ffff;
             border-radius: 10px;
             box-shadow:0px 0px 5px 5px #E5E4E2;
+            color: #232323;
         }
         #row-frame {
             width: 95%;
@@ -313,7 +317,7 @@ class Frames extends HTMLElement {
             justify-content: start;
             font-family: 'Alatsi';
             font-size: 1.5vw;
-            color: #232323;
+            
         }
         #body-frame {
             width: 90%;
@@ -698,7 +702,7 @@ setInterval(() => {
 
 test();
 
-
+// Interests Component ..................................................................
 class Interests extends HTMLElement {
   constructor() {
     super();
@@ -721,6 +725,7 @@ class Interests extends HTMLElement {
       background-color: #ffff;
       display: flex;
       margin-bottom: 20px;
+      color: #232323;
     }
     #left {
       width: 40%;
@@ -737,7 +742,7 @@ class Interests extends HTMLElement {
       align-items: center;
       font-family: 'Alatsi';
       font-size: 18px;
-      color: #232323;
+      
     }
     </style>
     `;
@@ -1623,3 +1628,189 @@ nav.onclick = function(e) {
   }
 
 }
+
+class AppSettings extends HTMLElement {
+  constructor() {
+    super();
+    this.attachShadow({mode: 'open'});
+    const root = this.shadowRoot;
+    root.innerHTML = `
+    <div id = 'app-container'>
+      <div class = 'row' id = 'dark-mode'>
+        <div class = 'icon'>
+          <slot name = 'dark-mode'></slot>
+        </div>
+        <div class = 'str'>Dark Mode</div>
+        <div class = 'btn' id = 'btn-dark-mode'>
+          <div id = 'toggle-container' class = 'toggle'>
+            <div id = 'ball' class = 'ball-btn'></div>
+          </div>
+        </div>
+      </div>
+
+      <div class = 'row' id = 'lite-version'></div>
+      <div class = 'row' id = 'pdf'></div>
+      <div class = 'row' id = 'report'></div>
+    </div>
+
+    <style>
+    #app-container {
+      width: 17vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Alatsi';
+      color: #2b2b2b;
+      transition: all 0.5s ease-out;
+    }
+    .row {
+      width: 100%;
+      height: 50px;
+      display: flex;
+    }
+    
+    .icon {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .str {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: center;
+    }
+    .btn {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      
+    }
+    .toggle {
+      width: 50px;
+      height: 30px;
+      border-radius: 25px;
+      background-color: #E5E4E2;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.5s ease-out;
+    }
+
+    .ball-btn {
+      width: 25px;
+      height: 25px;
+      background-color: #ffff;
+      border-radius: 100%;
+      transition: all 0.5s ease-out;
+    }
+    .cool {
+      justify-content: flex-end;
+      background-color: royalblue;
+    }
+    </style>
+    `;
+  }
+
+  connectedCallback() {
+    const btn = this.shadowRoot.getElementById('toggle-container');
+    const ball = this.shadowRoot.getElementById('ball');
+
+    btn.onclick = function() {
+      this.classList.toggle('cool');
+    }
+  }
+}
+
+window.customElements.define('app-settings', AppSettings);
+
+
+// App settings....
+const appSettingsBtn = document.getElementsByClassName('fa-cogs')[0];
+const closeAppSettings = document.getElementById('close-app-settings');
+const app = document.getElementById('app-settings');
+
+function openAppSettings() {
+  app.style.display = 'flex';
+}
+
+appSettingsBtn.addEventListener('click', openAppSettings, false);
+
+closeAppSettings.onclick = function() {
+  app.style.display = 'none';
+}
+
+
+// operations test dark mode
+const loka = rockFrame[0].shadowRoot.getElementById('frame');
+const cards = document.getElementsByTagName('skill-card');
+const profileCard =document.getElementsByTagName('profile-card')[0];
+const edu = document.getElementsByClassName('backbone-education');
+const exipo = document.getElementsByClassName('backbone-experience')[0];
+const aro = document.getElementsByClassName('far');
+const lango = document.getElementsByTagName('my-languages');
+const awardo = document.getElementsByClassName('awards');
+const intersto = document.getElementsByTagName('interest-tag');
+const navigato = document.getElementsByTagName('navigation-bar')[0];
+const leftWall = document.getElementsByClassName('profile-card-container')[0];
+const rightWall = document.getElementsByClassName('right-static-wall')[0];
+const homeWalls = document.getElementsByClassName('home-wall')[0];
+const theEnd = document.getElementById('the-end');
+const dropo = document.getElementsByClassName('drop-mail-container')[0];
+const dropBody = document.getElementById('drop-body');
+
+
+
+document.documentElement.style.backgroundColor = '#212121';
+dropBody.style.cssText= 'background-color: #212121; color: #E5E4E2;';
+dropo.style.cssText = 'background-color: #212121; color: #E5E4E2;';
+homeWalls.style.backgroundColor = '#212121';
+leftWall.style.backgroundColor = '#212121';
+rightWall.style.backgroundColor = '#212121';
+exipo.style.color = '#E5E4E2';
+theEnd.style.cssText = 'background-color: #212121; color: #E5E4E2; ';
+navigato.shadowRoot.getElementById('navigation-container').style.backgroundColor = '#212121';
+for (let i = 0; i < cards.length; i++) {
+  cards[i].shadowRoot.getElementById('card').style.cssText = `background-color: #212121; color: #E5E4E2;`;
+}
+
+profileCard.shadowRoot.getElementById('profile-frame').style.cssText = `background-color: #212121; color: #E5E4E2`;
+
+for (let i = 0; i < rockFrame.length; i++) {
+  rockFrame[i].shadowRoot.getElementById('frame').style.cssText = `background-color: #212121; color: #E5E4E2`;
+}
+
+for (let i = 0; i < edu.length; i++) {
+  edu[i].style.cssText  = `color:  #E5E4E2`;
+}
+
+for (let i = 0; i < aro.length; i++) {
+  aro[i].style.color = '#E5E4E2';
+
+}
+
+for (let i = 0; i < lango.length; i++) {
+  lango[i].shadowRoot.getElementById('lang-row-header').style.cssText = `background-color: #212121; border: 2px solid #E5E4E2;`;
+}
+
+for (let i = 0; i < awardo.length; i++) {
+  awardo[i].style.cssText = `background-color: #212121; border: 2px solid #E5E4E2;`;
+}
+
+for (let i = 0; i < intersto.length; i++) {
+  intersto[i].shadowRoot.getElementById('container-interest').style.cssText = `background-color: #212121; color: #E5E4E2;`;
+}
+
+const grapho = d3.select('#savago');
+grapho.selectAll('text').style('fill', '#E5E4E2')
+
+
