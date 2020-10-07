@@ -1,37 +1,37 @@
 [
   {
     "skillName": "Html",
-    "link": "",
+    "link": "https://repository-images.githubusercontent.com/134285701/635de980-586d-11ea-9220-1a3211239c30",
     "rate": "3"
   },
   {
     "skillName": "Css",
-    "link": "",
+    "link": "https://cdn.lynda.com/course/5038219/5038219-637366338628117163-16x9.jpg",
     "rate": "3"
   },
   {
     "skillName": "JavaScript",
-    "link": "",
+    "link": "https://res.cloudinary.com/practicaldev/image/fetch/s--ohpJlve1--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://res.cloudinary.com/drquzbncy/image/upload/v1586605549/javascript_banner_sxve2l.jpg",
     "rate": "4"
   },
   {
     "skillName": "React.js",
-    "link": "",
+    "link": "https://www.collonmade.com/wp-content/uploads/2017/08/React-JS-1.jpg.webp",
     "rate": "4"
   },
   {
     "skillName": "Node.Js",
-    "link": "",
+    "link": "https://i2.wp.com/blog.logrocket.com/wp-content/uploads/2019/10/nodejs.png?fit=1240%2C700&ssl=1",
     "rate": "4"
   },
   {
     "skillName": "Express.Js",
-    "link": "",
+    "link": "https://miro.medium.com/max/805/0*m1VOQP0FtcQufLgw.png",
     "rate": "4"
   },
   {
     "skillName": "PostgreSQL",
-    "link": "",
+    "link": "https://miro.medium.com/max/370/1*N8PzWF7yjXvqiDkdfs_5Eg.png",
     "rate": "3"
   }
  ]
