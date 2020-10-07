@@ -1,1 +1,37 @@
-
+[
+  {
+    "skillName": "Html",
+    "link": "",
+    "rate": "3"
+  },
+  {
+    "skillName": "Css",
+    "link": "",
+    "rate": "3"
+  },
+  {
+    "skillName": "JavaScript",
+    "link": "",
+    "rate": "4"
+  },
+  {
+    "skillName": "React.js",
+    "link": "",
+    "rate": "4"
+  },
+  {
+    "skillName": "Node.Js",
+    "link": "",
+    "rate": "4"
+  },
+  {
+    "skillName": "Express.Js",
+    "link": "",
+    "rate": "4"
+  },
+  {
+    "skillName": "PostgreSQL",
+    "link": "",
+    "rate": "3"
+  }
+ ]
