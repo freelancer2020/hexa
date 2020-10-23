@@ -50,3 +50,32 @@ function controlFlowLeft() {
 
 
 btnLeft.onclick = controlFlowLeft;
+
+
+
+/*
+
+
+ <Card header = 'JavaScript' title = 'Programming Language' cover = { javaS } />
+                <Card header = 'Html' title = 'Markup Language' cover = { Htm } />
+                <Card header = 'Css' title = 'Cascading style sheet' cover = { css } />
+                <Card header = 'Sass' title = 'Preprocessor' cover = { sass } />
+                <Card header = 'BootStrap' title = 'Css Library' cover = { bootStrap} />
+                <Card header = 'React' title = 'JavaScript Library' cover = { react } />
+                <Card header = 'Angular' title = 'JavaScript Framework' cover = { angular } />
+                <Card header = 'Vue' title = 'JavaScript Library' cover = { vue } />
+                <Card header = 'NodeJs' title = 'JavaScript Library' cover = { nodejs } />
+                <Card header = 'Express' title = 'Programming Language' cover = { express } />
+                <Card header = 'AI' title = 'ARTIFICIAL INTELLIGENCE' cover = { ai } />
+                <Card header = 'AI' title = 'ARTIFICIAL INTELLIGENCE' cover = { ai2 } />
+                <Card header = 'Machine Learning' title = 'Programming Language' cover = { algo } />
+                <Card header = 'Machine Learning' title = 'Programming Language' cover = { mani } />
+                <Card header = 'Java' title = 'Programming Language' cover = { java } />
+                <Card header = 'Git' title = 'Control Tools' cover = { git } />
+                <Card header = 'GitHub' title = 'Control Tools' cover = { gitHub }  />
+                <Card header = 'Python' title = 'Programming Language' cover = { python } />
+                <Card header = 'PostgreSQL' title = 'DataBase' cover = { postgresql } />
+                <Card header = 'Data' title = 'AI' cover = { data } />
+                <Card header = 'Structure' title = 'AI' cover = { structure } />
+                
+                */
