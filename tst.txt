@@ -1,1 +1,1 @@
-#stack [react, materialUI, nextJs, sass]
+#stack [ react, materialUI, nextJs, sass ]
