@@ -1,6 +1,7 @@
 
 [
   {
+    "cover": "https://wonderfulengineering.com/wp-content/uploads/2014/10/wallpaper-photos-31.jpg",
     "header": "Test from API server Application",
     "title": "Something new",
     "brief": "Fucll stack development react, javascript, nextjs, material ui, express",
