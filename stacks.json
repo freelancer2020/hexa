@@ -1,1 +1,3 @@
-
+[
+  "mostafa": {"location": "Warsaw", "title": "Front-End Developer", "stack": ["Html", "Css", "Sass", "JavaScript", "ReactJS", "NextJs", "NodeJS", "Express", "PostgreSQL", "Git", "more in progress.."]},
+]
