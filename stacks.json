@@ -1,5 +1,8 @@
 [
   {
-    "name": "Mostafa", "data": {"location": "Warsaw", "title": "Front-End Developer", "stack": ["Html", "Css", "Sass", "JavaScript", "ReactJS", "NextJs", "NodeJS", "Express", "PostgreSQL", "Git", "more in progress.."]}
+    "name": "Mostafa", "data": {"location": "Warsaw", "title": "Front-End Developer", "stack": ["Html", "Css", "Sass", "JavaScript", "ReactJS", "NextJs", "NodeJS", "Express", "PostgreSQL", "Git", "more in progress.."]},
+  },
+  {
+    "name": "Amir", "data": {"location": "Pruszkow", "title": "Data Analyst", "stack": ["English Teacher", "Playstation", "Tf15"]}
   }
 ]
