@@ -1,8 +1,8 @@
 [
-    "clientEID": "frontend@calCompass.com",
-    "clientEID": "frontend@calCompass.com",
-    "clientEID": "frontend@calCompass.com",
-    "clientEID": "frontend@calCompass.com",
-    "clientEID": "frontend@calCompass.com",
-    "clientEID": "frontend@calCompass.com"
+    {"clientEID": "frontend@calCompass.com"},
+    {"clientEID": "frontend@calCompass.com"},
+    {"clientEID": "frontend@calCompass.com"},
+    {"clientEID": "frontend@calCompass.com"},
+    {"clientEID": "frontend@calCompass.com"},
+    {"clientEID": "frontend@calCompass.com"}
 ]
