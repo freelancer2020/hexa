@@ -1,8 +1,9 @@
 [
-    {"clientEID": "frontend@calCompass.com"},
-    {"clientEID": "frontend@calCompass.com"},
-    {"clientEID": "frontend@calCompass.com"},
-    {"clientEID": "frontend@calCompass.com"},
-    {"clientEID": "frontend@calCompass.com"},
-    {"clientEID": "frontend@calCompass.com"}
+    {"clientEID": "amazon@calCompass.com"},
+    {"clientEID": "google@calCompass.com"},
+    {"clientEID": "tesla@calCompass.com"},
+    {"clientEID": "tiktok@calCompass.com"},
+    {"clientEID": "facebook@calCompass.com"},
+    {"clientEID": "tessco@calCompass.com"},
+    {"clientEID": "walmart@calcompass.com"}
 ]
