@@ -5,5 +5,10 @@
     {"clientEID": "tiktok@calCompass.com"},
     {"clientEID": "facebook@calCompass.com"},
     {"clientEID": "tessco@calCompass.com"},
-    {"clientEID": "walmart@calcompass.com"}
+    {"clientEID": "walmart@calcompass.com"},
+    {"clientEID": "carrefour@calcompass.com"},
+    {"clientEID": "saturn@calcompass.com"},
+    {"clientEID": "mediamarket@calcompass.com"},
+    {"clientEID": "euroRTV@calcompass.com"},
+    {"clientEID": "lidle@calcompass.com"}
 ]
