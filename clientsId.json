@@ -10,5 +10,10 @@
     {"clientEID": "saturn@calcompass.com"},
     {"clientEID": "mediamarket@calcompass.com"},
     {"clientEID": "euroRTV@calcompass.com"},
-    {"clientEID": "lidle@calcompass.com"}
+    {"clientEID": "lidle@calcompass.com"},
+    {"clientEID": "ibm@calcompass.com"},
+    {"clientEID": "tech@calcompass.com"},
+    {"clientEID": "microsoft@calcompass.com"},
+    {"clientEID": "samsung@calcompass.com"},
+    {"clientEID": "huawei@calcompass.com"}
 ]
