@@ -1,16 +1,16 @@
 [
-    {"clientEID": "amazon@calCompass.com"},
-    {"clientEID": "google@calCompass.com"},
-    {"clientEID": "tesla@calCompass.com"},
-    {"clientEID": "tiktok@calCompass.com"},
-    {"clientEID": "facebook@calCompass.com"},
-    {"clientEID": "tessco@calCompass.com"},
-    {"clientEID": "walmart@calcompass.com"},
-    {"clientEID": "carrefour@calcompass.com"},
-    {"clientEID": "saturn@calcompass.com"},
-    {"clientEID": "mediamarket@calcompass.com"},
-    {"clientEID": "euroRTV@calcompass.com"},
-    {"clientEID": "lidle@calcompass.com"},
-    {"clientEID": "ibm@calcompass.com"}
+    {"clientEID": "amazon"},
+    {"clientEID": "google"},
+    {"clientEID": "tesla"},
+    {"clientEID": "tiktok"},
+    {"clientEID": "facebook"},
+    {"clientEID": "tessco"},
+    {"clientEID": "walmart"},
+    {"clientEID": "carrefour"},
+    {"clientEID": "saturn"},
+    {"clientEID": "mediamarket"},
+    {"clientEID": "euroRTV"},
+    {"clientEID": "lidle"},
+    {"clientEID": "ibm"}
 
 ]
