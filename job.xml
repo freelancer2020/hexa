@@ -1,4 +1,5 @@
  <card category="job">
-  <name> Mostafa</name>
-  <title>Developer</title>
-  </card>
+   <name> Mostafa</name>
+   <title>Developer</title>
+   <location id='loca'>Poland</location>
+ </card>
