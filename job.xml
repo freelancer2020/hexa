@@ -1,5 +1,26 @@
- <card category="job">
-   <name> Mostafa</name>
+<job>
+  <card category="job">
+   <name class="name">John</name>
    <title>Developer</title>
    <location id='loca'>Poland</location>
  </card>
+
+  <card category="job">
+   <name class="name">Max</name>
+   <title>Developer</title>
+   <location id='loca'>Poland</location>
+ </card>
+
+  <card category="job">
+   <name class="name">Sarah</name>
+   <title>Developer</title>
+   <location id='loca'>Poland</location>
+ </card>
+
+  <card category="job">
+   <name class="name">Mostafa</name>
+   <title>Developer</title>
+   <location id='loca'>Poland</location>
+ </card>
+ 
+</job>
