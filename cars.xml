@@ -4,7 +4,7 @@
     <c:model>2020</c:model>
     <c:color>Black</c:color>
     <c:country>German</c:country>
-    <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onRequest" xlink:show="new">more info</url>
+    <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onLoad" xlink:show="new">more info</url>
   </c:car>
   <c:car name="mercedes">
     <c:model>2019</c:model>
