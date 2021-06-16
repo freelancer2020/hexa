@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cars xmlns:c = "car">
+<cars xmlns:c = "car" xmlns:xlink="http://www.w3.org/1999/xlink">
   <c:car name="bmw">
     <c:model>2020</c:model>
     <c:color>Black</c:color>
     <c:country>German</c:country>
+    <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onRequest" xlink:show="new">more info</url>
   </c:car>
   <c:car name="mercedes">
     <c:model>2019</c:model>
     <c:color>White</c:color>
     <c:country>German</c:country>
+     <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onRequest" xlink:show="new">more info</url>
   </c:car>
   <c:car name="ferrari">
     <c:model>2021</c:model>
     <c:color>Red</c:color>
     <c:country>USA</c:country>
+     <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onRequest" xlink:show="new">more info</url>
   </c:car>
   <c:car name="bougatti">
     <c:model>2021</c:model>
     <c:color>Gray</c:color>
     <c:country>France</c:country>
+     <url xlink:type="simple" xlink:href="https://developer.mozilla.org/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript" xlink:actuate="onRequest" xlink:show="new">more info</url>
   </c:car>
 </cars>
