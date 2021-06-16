@@ -1,1 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<c:cars xmlns:c = "car">
+  <c:car name="bmw">
+    <c:model>2020</c:model>
+    <c:color>Black</c:color>
+    <c:country>German</c:country>
+  </c:car>
+  <c:car name="mercedes">
+    <c:model>2019</c:model>
+    <c:color>White</c:color>
+    <c:country>German</c:country>
+  </c:car>
+  <c:car name="ferrari">
+    <c:model>2021</c:model>
+    <c:color>Red</c:color>
+    <c:country>USA</c:country>
+  </c:car>
+  <c:car name="bougatti">
+    <c:model>2021</c:model>
+    <c:color>Gray</c:color>
+    <c:country>France</c:country>
+  </c:car>
+</c:cars>
